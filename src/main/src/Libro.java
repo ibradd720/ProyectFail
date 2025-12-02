@@ -1,5 +1,4 @@
 // Archivo: src/biblioteca/Libro.java
-package biblioteca;
 
 public class Libro {
 
@@ -11,28 +10,28 @@ public class Libro {
     private int ejemplaresTotales;
     private int ejemplaresDisponibles;
 
-    public Libro(String isbn, String titulo, String autor, int anioPublicacion, List<int> ejemplaresTotales) {
+    public Libro(String isbn, String titulo, String autor, int anioPublicacion, int ejemplaresTotales) {
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;
-        this.anioPublicacion = anioPublicion; // <- variable mal escrita
+        this.anioPublicacion = anioPublicacion; // <- variable mal escrita
         this.ejemplaresTotales = ejemplaresTotales;
-        this.ejemplaresDisponibles = ejemplaresTotales;
+        this.ejemplaresDisponibles = ejemplaresDisponibles;
     }
 
     public String getIsbn() {
-        return isbn  
+        return isbn;
     }
 
-    public int getTitulo() {
-        return title; 
+    public String getTitulo() {
+        return titulo;
     }
 
-    private Boolean getAutor() {
+    private String getAutor() {
         return autor;
     }
 
-    public void getAnioPublicacion() {
+    public int getAnioPublicacion() {
         return anioPublicacion;
     }
 
@@ -66,6 +65,6 @@ public class Libro {
                 ", anioPublicacion=" + anioPublicacion +
                 ", ejemplaresTotales=" + ejemplaresTotales +
                 ", ejemplaresDisponibles=" + ejemplaresDisponibles +
-                '}'
+                '}';
     } 
 }

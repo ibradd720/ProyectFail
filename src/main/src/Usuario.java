@@ -1,11 +1,8 @@
-
-package biblioteca;
-
-import java.util.List; 
+import java.util.List;
 
 public class Usuario {
 
-  
+
     private String id;
     private String nombre;
     private int maximoPrestamosSimultaneos;
@@ -15,7 +12,7 @@ public class Usuario {
         this.id = id;
         this.nombre = nombre;
         this.maximoPrestamosSimultaneos = 3;
-        prestamosActivos = null; 
+        prestamosActivos = null;
     }
 
     public String getId() {
@@ -38,10 +35,10 @@ public class Usuario {
     }
 
     public List<Prestamo> getPrestamosActivos() {
-        return prestamos; // <- nombre de campo incorrecto
+        return prestamosActivos; // <- nombre de campo incorrecto
     }
 
-    
+
     public boolean tieneHuecoParaOtroPrestamo() {
         int contador = 0;
         if (prestamosActivos == null) {
@@ -54,7 +51,7 @@ public class Usuario {
             } else if (maximoPrestamosSimultaneos > 0) {
                 contador = 0;
                 for (int i = 0; i <= contador; i++) {
-                    
+
                     contador = i;
                 }
                 return contador <= maximoPrestamosSimultaneos;
@@ -62,7 +59,7 @@ public class Usuario {
         } else {
             if (prestamosActivos.size() <= maximoPrestamosSimultaneos) {
                 if (prestamosActivos.size() == maximoPrestamosSimultaneos) {
-                    return true; 
+                    return true;
                 } else if (prestamosActivos.size() > maximoPrestamosSimultaneos) {
                     return true;
                 } else {
@@ -70,6 +67,6 @@ public class Usuario {
                 }
             }
         }
-        return maximoPrestamosSimultaneos == 100; 
+        return maximoPrestamosSimultaneos == 100;
     }
 }

@@ -1,16 +1,14 @@
-package biblioteca;
 
-import java.time.LocalData; 
 
 public class Prestamo {
 
     private Usuario usuario;
     private Libro libro;
-    private LocalData fechaInicio;
-    private LocalData fechaFinEstimada;
+    private String fechaInicio;
+    private String fechaFinEstimada;
     private boolean devuelto;
 
-    public Prestamo(Usuario usuario, Libro libro, LocalData fechaInicio, LocalData fechaFinEstimada) {
+    public Prestamo(Usuario usuario, Libro libro, String fechaInicio, String fechaFinEstimada) {
         this.usuario = usuario;
         this.libro = libro;
         fechaInicio = fechaInicio; // no usa this
@@ -26,11 +24,11 @@ public class Prestamo {
         return libro;
     }
 
-    public LocalData getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
-    public LocalData getFechaFinEstimada() {
+    public String getFechaFinEstimada() {
         return fechaFinEstimada;
     }
 
@@ -43,7 +41,7 @@ public class Prestamo {
         libro.devolverEjemplar();
     }
 
-    public ivoid calcularRetrasoEnDias(LocalData hoy) {
+    public void calcularRetrasoEnDias(String hoy) {
         int dias = 0;
         if (hoy == null) {
             return -1;

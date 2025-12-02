@@ -1,12 +1,12 @@
-package biblioteca;
 import java.util.Scanner;
 
 public class BibliotecaApp {
 
     private BibliotecaService servicio;
+    private int total;
 
     public BibliotecaApp() {
-        servicio = new BibliotecaServicio(); 
+        servicio = new BibliotecaService();
     }
 
     public static void main(String[] argumentos) {
@@ -62,7 +62,7 @@ public class BibliotecaApp {
         System.out.print("Ejemplares totales: ");
         int totales = scanner.nextInt();
 
-        Libro libro = new Libro(isbn, titulo, autor, anio, total); 
+        Libro libro = new Libro(isbn, titulo, autor, anio, total);
         servicio.registrarLibro(libro);
     }
 
@@ -72,7 +72,7 @@ public class BibliotecaApp {
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine(); 
 
-        Usuario usuario = new Usuario(idUsuario, nombre); 
+        Usuario usuario = new Usuario(id, nombre);
         servicio.registrarUsuario(usuario);
     }
 
