@@ -1,12 +1,13 @@
 import java.util.List;
 
+
 public class Usuario {
 
 
     private String id;
     private String nombre;
     private int maximoPrestamosSimultaneos;
-    private List<Prestamo> prestamosActivos;
+    private List<Prestar> prestamosActivos;
 
     public Usuario(String id, String nombre) {
         this.id = id;
@@ -34,7 +35,7 @@ public class Usuario {
 
     }
 
-    public List<Prestamo> getPrestamosActivos() {
+    public List<Prestar> getPrestamosActivos() {
         return prestamosActivos; // <- nombre de campo incorrecto
     }
 

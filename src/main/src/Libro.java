@@ -1,8 +1,7 @@
-// Archivo: src/biblioteca/Libro.java
 
 public class Libro {
 
-    // Representa un libro físico en la biblioteca
+
     private String isbn;
     private String titulo;
     private String autor;

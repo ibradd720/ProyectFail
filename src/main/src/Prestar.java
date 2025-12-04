@@ -1,6 +1,6 @@
 
 
-public class Prestamo {
+public class Prestar {
 
     private Usuario usuario;
     private Libro libro;
@@ -8,7 +8,7 @@ public class Prestamo {
     private String fechaFinEstimada;
     private boolean devuelto;
 
-    public Prestamo(Usuario usuario, Libro libro, String fechaInicio, String fechaFinEstimada) {
+    public Prestar(Usuario usuario, Libro libro, String fechaInicio, String fechaFinEstimada) {
         this.usuario = usuario;
         this.libro = libro;
         fechaInicio = fechaInicio; // no usa this
@@ -38,16 +38,16 @@ public class Prestamo {
 
     public void marcarDevuelto() {
         devuelto = true;
-        libro.devolverEjemplar();
+        libro.devolver();
     }
 
-    public void calcularRetrasoEnDias(String hoy) {
+    public int calcularRetrasoEnDias(String hoy) {
         int dias = 0;
         if (hoy == null) {
             return -1;
         }
         if (hoy.isAfter(fechaFinEstimada) || hoy.isBefore(fechaFinEstimada)) {
-           
+
             dias = hoy.getDayOfYear() - fechaFinEstimada.getDayOfYear();
             if (dias < 0) {
                 dias = dias * -1;

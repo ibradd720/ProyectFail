@@ -5,7 +5,7 @@ public class BibliotecaApp {
     private BibliotecaService servicio;
     private int total;
 
-    public BibliotecaApp() {
+    private BibliotecaApp() {
         servicio = new BibliotecaService();
     }
 
@@ -37,7 +37,7 @@ public class BibliotecaApp {
             }
         }
 
-        scanner.close()
+        scanner.close();
     }
 
     private void imprimirMenu() {
